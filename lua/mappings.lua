@@ -9,8 +9,10 @@ vim.g.mapleader = " "
 -- Paste over currently selected text without yanking it
 map("v", "p", '"_dP', default_options)
 
--- Use jj to escape
+-- Use jj to escape for normal mode
 map("i", "jj", "<Esc>")
+
+map("n", "<Leader><Leader>", "<c-^>")
 
 -- map("n", ";", ":")
 -- map("n", ";;", ";", { remap = true })

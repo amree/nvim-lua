@@ -86,7 +86,8 @@ wk.register({
     p = { "<cmd>NvimTreeToggle<cr>", "Toggle file explorer" },
     c = { "<cmd>NvimTreeFindFile<cr>", "Find current file" },
     f = { "<cmd>Telescope find_files<cr>", "Find files" },
-    g = { "<cmd>Telescope live_grep<cr>", "live_grep" },
+    g = { "<cmd>Telescope live_grep<cr>", "Live grep" },
+    x = { "<cmd>let @+=@%<cr>", "Copy file path" },
   },
   m = {
     name = "Misc",
