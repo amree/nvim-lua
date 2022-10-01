@@ -1,7 +1,7 @@
 -- Bootstrapping packer
 -- Ref: https://github.com/wbthomason/packer.nvim/blob/c662294/README.md#bootstrapping
 local fn = vim.fn
-local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
+local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap = fn.system({
     "git",
@@ -76,7 +76,7 @@ packer.startup(function(use)
   -- File navigation
   use({
     "nvim-telescope/telescope.nvim",
-    requires = {{"nvim-lua/plenary.nvim"}},
+    requires = { { "nvim-lua/plenary.nvim" } },
     config = get_config("telescope"),
   })
 
@@ -96,9 +96,6 @@ packer.startup(function(use)
     config = get_config("toggleterm"),
   })
 
-  -- Moving between splits
-  use({ "numToStr/Navigator.nvim", config = get_config("navigator") })
-
   -- packer plugin itself
   use("wbthomason/packer.nvim")
 
@@ -108,14 +105,11 @@ packer.startup(function(use)
   -- Git
   use({
     "tpope/vim-fugitive",
-    requires = {{
+    requires = { {
       "shumphrey/fugitive-gitlab.vim",
       "tpope/vim-rhubarb",
-    }},
+    } },
   })
-
-  -- -- Scrolling
-  -- use({ "karb94/neoscroll.nvim", config = get_config("neoscroll") })
 
   -- Tabs
   use({ "nanozuki/tabby.nvim", config = get_config("tabby") })
