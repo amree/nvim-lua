@@ -69,7 +69,7 @@ require("which-key").setup({
 })
 
 local wk = require("which-key")
-local default_options = { silent = true }
+-- local default_options = { silent = true }
 
 -- register non leader based mappings
 wk.register({
@@ -94,4 +94,11 @@ wk.register({
     p = { "<cmd>PackerSync<cr>", "PackerSync" },
     g = { "<cmd>lua require('functions').toggle_lazygit()<cr>", "Open lazygit" },
   },
+  t = {
+    name = "Test",
+    n = { "<CMD>TestNearest -strategy=toggleterm<CR>", "Test nearest" },
+    f = { "<CMD>TestFile -strategy=toggleterm<CR>", "Test the whole file" },
+    l = { "<CMD>TestFile -strategy=toggleterm<CR>", "Run the last test"},
+
+  }
 }, { prefix = "<leader>" })

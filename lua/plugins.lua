@@ -43,8 +43,11 @@ packer.init({
 -- configs are available in .config/nvim/lua/config
 packer.startup(function(use)
   use({
-    "marko-cerovac/material.nvim",
-    config = get_config("material"),
+    "metalelf0/jellybeans-nvim",
+    requires = {
+      "rktjmp/lush.nvim", -- helpers
+    },
+    config = get_config("jellybeans-nvim"),
   })
 
   -- Various small plugins
@@ -111,10 +114,23 @@ packer.startup(function(use)
     }},
   })
 
+  -- -- Scrolling
+  -- use({ "karb94/neoscroll.nvim", config = get_config("neoscroll") })
+
+  -- Tabs
+  use({ "nanozuki/tabby.nvim", config = get_config("tabby") })
+
   -- Better surround plugin
   use({ "tpope/vim-surround" })
 
+  -- NOT WORKING
   use({ "simrat39/symbols-outline.nvim", config = get_config("symbols-outline") })
+
+  -- Test
+  use({ "vim-test/vim-test", config = get_config("vim-test") })
+
+  -- tmux + neovim navigation
+  use({ "alexghergh/nvim-tmux-navigation" })
 
   use({
     "VonHeikemen/lsp-zero.nvim",
