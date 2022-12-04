@@ -92,7 +92,7 @@ wk.register({
   m = {
     name = "Misc",
     p = { "<cmd>PackerSync<cr>", "PackerSync" },
-    g = { "<cmd>lua require('functions').toggle_lazygit()<cr>", "Open lazygit" },
+    g = { "<cmd>lua require('functions').toggle_tig()<cr>", "Open tig" },
   },
   t = {
     name = "Test",

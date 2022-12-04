@@ -57,6 +57,12 @@ packer.startup(function(use)
     config = get_config("mini"),
   })
 
+  -- Movements
+  use({
+    "justinmk/vim-sneak",
+    config = get_config("vim-sneak"),
+  })
+
   -- File explorer
   use({
     "kyazdani42/nvim-tree.lua",
