@@ -155,6 +155,21 @@ packer.startup(function(use)
     config = get_config("lsp-zero"),
   })
 
+  -- Show git changes
+  use({ "lewis6991/gitsigns.nvim", config = get_config("gitsigns") })
+
+  -- Proper support for ruby blocks completion
+  use({ "tpope/vim-endwise" })
+
+  -- OneDarkPro theme
+  use({ "olimorris/onedarkpro.nvim", config = get_config("onedarkpro") })
+
+  -- Highlight matching if/def/etc
+  use({ "andymass/vim-matchup", config = get_config("vim-matchup") })
+
+  -- coffeescript
+  use({ "kchmck/vim-coffee-script" })
+
   -- Used for bootstrapping
   if packer_bootstrap then
     require("packer").sync()
