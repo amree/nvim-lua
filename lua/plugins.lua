@@ -170,6 +170,14 @@ packer.startup(function(use)
   -- coffeescript
   use({ "kchmck/vim-coffee-script" })
 
+  -- copilot
+  use({
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = get_config("copilot"),
+  })
+
   -- Used for bootstrapping
   if packer_bootstrap then
     require("packer").sync()
