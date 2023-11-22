@@ -1,1 +1,1 @@
-require("lsp-zero").setup()
+vim.g['test#ruby#rspec#executable'] = 'bundle exec spring rspec'
